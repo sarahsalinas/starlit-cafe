@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <title>Starlit Cafe</title>
+  <link rel="stylesheet" href="https://use.typekit.net/nqa0hoi.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script> <!--Defer to have js run after html loads-->
+</head>
+<body>
+  <header>
+    <h1>Starlit Cafe and Game Lab</h1>
+    <nav>
+    <!-- my navigation bar for my webpage -->
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    <!--Toggle for the light vs dark mode!-->
+      <button id="modeToggle"> ☀️ / 🌙</button>
+    </nav>
+  </header>
+  <main>
+    <section id="about"> <!--About/purpose of my cafe-->
+      <h2>Welcome to Starlit Cafe!</h2><br>
+      <!--Adding divs to <p> so that I can have two images on both sides-->
+      <div class="about-block">
+         <p>We are a cozy and pastel-themed gaming cafe where coffee lovers and gamers unite under the stars. Whether you're grinding levels or just grabbing your daily latte, this is your third place — a dreamy space to be yourself.</p>
+         <!--images from unsplash-->
+         <img src="images/barista.jpg" alt="Barista in cafe making a drink">
+      </div>
+      
+      <div class="about-block reverse">
+        <img src="images/switch.jpg" alt="Nintendo Switch being held">
+        <p>Inspired by galaxy vibes and powered by espresso (and love ❤), Starlit Cafe is designed for connection, comfort, and caffeine. From Nintendo Switch lounges and PC gaming stations in the back, to social corners and work tables in the front we offer a space for everyone that blends the softness of stardust with the energy of a digital arcade.</p>
+      </div>
+    </section>
+
+    <section id="menu"> <!--Menu that will display drinks offered-->
+      <h2>Our Menu</h2>
+      <div id="productDisplay">
+        <!-- Javascript will load one drink at a time, add images in js because it will be interactive -->
+      </div>
+      <div id="productControls">
+        <!-- Will add buttons here for each product by Javascript -->
+      </div>
+    </section>
+    <!--random number generated game section-->
+    <section id="guessingGame">
+      <h2>Win a Free Coffee!</h2>
+      <p>Guess a number, if you get it right, you win a free coffee on us! ✮⋆˙</p>
+      <form id="gameForm">
+        <label for="guess">Enter a number between 1 and 10:</label>
+        <input type="number" id="guess" name="guess" min="1" max="10" required>
+        <button type="submit">Submit</button>
+        <div id="gameResult"></div>
+      </form>
+    </section>
+    <!--contact form-->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="comments">Comments *</label>
+        <textarea id="comments" name="comments" required></textarea>
+
+        <fieldset>
+          <legend>How should we contact you? *</legend>
+          <label><input type="radio" name="contactPref" value="email"> Email</label>
+          <label><input type="radio" name="contactPref" value="phone"> Phone</label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <div id="formErrors"></div>
+      </form>
+      <!--putting formThanks div outside of form so it doesn't reset-->
+      <div id="formThanks"></div>
+    </section>
+  </main>
+  <!--Adding a back to top of webpage option-->
+  <a href="#" class="back-to-top">⬆</a>
+  <footer>
+    <p>&copy; 2025 Starlit Cafe. Made by Sarah Salinas.</p>
+  </footer>
+</body>
+</html>

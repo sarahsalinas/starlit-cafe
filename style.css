@@ -1,0 +1,419 @@
+/* defining all my color and font variables here so it's easier to switch things up later */
+:root {
+    --bg-light: #fffdfc;
+    --bg-dark: #1e1c2a;
+  
+    --text-light: #1f1f1f;
+    --text-dark: #f5f5f5; 
+  
+    --accent-pink: #f2cbe7;
+    --accent-purple: #c6b4f2;
+  
+    --button-bg: #e3d0ff; 
+    --button-hover: #d1b3ff;
+  
+    --star-glow: #fef3c7; 
+  
+    --star-yellow: #fff89c;
+    --midnight-blue: #2d2c6c;
+  
+    --font-heading: "cerulya-cf", serif;
+    --font-body: "sofia-pro", sans-serif;
+  }
+  
+  /* setting base look for the whole page */
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  /* this flips everything when dark mode is active */
+  body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  /* galaxy header styling — I want it to be magical! */
+  header {
+    background: linear-gradient(to right, var(--accent-purple), var(--accent-pink));
+    color: var(--text-dark);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* big title font for the cafe */
+  header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
+    margin: 0;
+    color: var(--text-dark);
+  }
+  
+  /* nav links with lil hover glow */
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    color: var(--star-yellow);
+    text-shadow: 0 0 5px var(--star-glow);
+  }
+  
+  /* toggle button for light/dark mode */
+  #modeToggle {
+    margin-left: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--text-dark);
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #modeToggle:hover {
+    background-color: var(--button-hover);
+    color: var(--text-light);
+  }
+  
+  /* back to top floating button */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--button-bg);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    background-color: var(--button-hover);
+  }
+/* adding ascii emoji from emojicombos.com/star */
+  main::before {
+    content: "⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦ ⠀ ⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀* ⠀⠀⠀.　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　　　　　*　　　　　　　　　　　. .　　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　*　　　　　⠀　　　　⠀　　,⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　 　　˚　　　⠀　⠀  　　,　　　　　　.　　　　　　　　　　　　　.　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　　　　　　　*　　　　　　　　　　　　　　　　　　.　　　　.　　　　.　　　⠀　　　　　　　　　　　.　　　　　　　˚　　　　　　　　ﾟ　　　　　.　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　　*　　⠀.　　　　　.　　　　　　　　　　⠀✦　˚　　　　　　　　　　　　　　* .⠀ 　　　　　　　　　　.　　　　　　　　.　　　　　✦⠀　   　　　,　　    　　　　　　　　.";
+    white-space: pre-wrap;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    pointer-events: none;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    opacity: 0.7;
+    color: var(--accent-purple);
+  }
+
+.dark-mode main::before {
+    color: var(--star-yellow);
+    opacity: 0.7;
+}
+  
+  main {
+    position: relative;
+    z-index: 1;
+  }
+  /* container for all main content */
+main {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  /* background of main when in dark mode */
+  body.dark-mode main {
+    background-color: var(--midnight-blue);
+  }
+  
+  /* general section styling */
+  section {
+    padding: 2rem 2rem;
+    margin: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
+  
+  /* section bg in dark mode */
+  body.dark-mode section {
+    background-color: var(--midnight-blue);
+  }
+
+  /* changing how images of nintendo and barista are shown as well as resizing their respective paragraphs */
+.about-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-block img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-block p {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+  /* making menu h2 become center-aligned */
+  #menu h2 {
+    text-align: center;
+  }
+
+  /* section heading styling */
+  section h2 {
+    color: var(--midnight-blue);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px var(--midnight-blue);
+  }
+  
+  /* heading in dark mode section */
+  body.dark-mode section h2 {
+    color: var(--text-dark);
+    text-shadow: 1px 1px 2px var(--accent-pink);
+  }
+  
+  /* subheadings for drink names */
+  section h3 {
+    font-family: var(--font-heading);
+    color: var(--bg-dark);
+    font-size: 1.55rem;
+    text-shadow: 1px 1px 1px var(--bg-dark);
+  }
+  
+  body.dark-mode section h3 {
+    color: var(--star-glow);
+    text-shadow: 1px 1px 5px var(--star-yellow);
+  }
+  
+  /* styling for the product area */
+  #productDisplay {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* glowing drink images */
+  #productDisplay img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 1rem;
+    box-shadow:
+      0 0 20px var(--star-glow),
+      0 0 40px var(--star-glow),
+      0 0 80px var(--star-glow),
+      0 0 100px var(--accent-purple);
+    transition: box-shadow 0.4s ease;
+    margin-bottom: 1rem;
+  }
+  
+  /* buttons below product image */
+  #productControls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  #productControls button {
+    background-color: var(--button-bg);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #productControls button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  /* guessing game box styling */
+  #guessingGame {
+    background: var(--accent-pink);
+    padding: 2rem;
+    border-radius: 6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dark-mode #guessingGame h2 {
+    color: var(--midnight-blue);
+    text-shadow: 1px 1px 2px var(--midnight-blue);
+  }
+
+  #guessingGame form {
+    margin-top: 1rem;
+  }
+  
+  #guessingGame input[type="number"] {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 2px solid var(--accent-purple);
+    border-radius: 0.5rem;
+    width: 60px;
+    text-align: center;
+    margin-right: 1rem;
+  }
+  
+  #guessingGame button[type="submit"] {
+    background-color: var(--button-bg);
+    color: var(--text-light);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #guessingGame button[type="submit"]:hover {
+    background-color: var(--button-hover);
+  }
+  
+  #gameResult {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--midnight-blue);
+  }
+  
+  /* styling the contact section */
+  #contact {
+    background-color: var(--accent-purple);
+    color: var(--text-dark);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 12px var(--accent-pink);
+    margin-top: 1rem;
+  }
+  
+  .dark-mode #contact {
+    background-color: var(--midnight-blue);
+  }
+  
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #contactForm input, #contactForm textarea {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  #contactForm textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  #contactForm fieldset {
+    border: none;
+    padding: 0;
+  }
+  
+  #contactForm legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  #contactForm label {
+    font-weight: 500;
+  }
+  
+  #contactForm button[type="submit"] {
+    background-color: var(--button-bg);
+    color: var(--text-light);
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contactForm button[type="submit"]:hover {
+    background-color: var(--button-hover);
+  }
+  
+  #formErrors, #formThanks {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* styling error messages */
+  #formErrors {
+    background-color: #ffebeb;
+    color: #8b0000;
+    border: 1px solid #f5c2c2;
+  }
+  
+  /* styling success message */
+  #formThanks {
+    background-color: var(--star-glow);
+    color: var(--midnight-blue);
+    border: 1px solid #fff2b3;
+  }
+  
+  /* footer section */
+  footer {
+    background-color: var(--midnight-blue);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  footer p {
+    margin: 0;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+  }
