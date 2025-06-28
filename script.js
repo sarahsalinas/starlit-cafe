@@ -5,19 +5,19 @@
 const products = [
     {
         name: "Moonbeam Mocha",
-        image: "images/moonbeam-mocha.png",
+        image: "moonbeam-mocha.png",
         description: "Velvety, rich, mocha latte with violet galaxy foam and edible star dust"
     },
 
     {
         name: "Strawberry Stardust",
-        image: "images/strawberry-stardust.png",
+        image: "strawberry-stardust.png",
         description: "Dreamy matcha topped with soft strawberry foam and starlight sweetness"
     },
 
     {
         name: "Starbit Brownie",
-        image: "images/starbit-brownie.png",
+        image: "starbit-brownie.png",
         description: "A warm, gooey fudge brownie dusted with sparkly starbits"
     }
 ]
